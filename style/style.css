@@ -3,3 +3,37 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: #b91450;
+    font-family: sans-serif;
+}
+
+/* Utility */
+
+.color-pink{
+    color: #b91450;
+}
+
+.color-white{
+    color: #fff;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.border-radius{
+    border-radius: 20px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+/* Start css */
+
+.container{
+    max-width: 1200px;
+    margin-top: 50px;
+}
