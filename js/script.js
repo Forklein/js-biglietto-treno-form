@@ -30,11 +30,49 @@ var userField = document.getElementById('user');
 var kmsField = document.getElementById('kms');
 var ageField = document.getElementById('age');
 
+//! TARGET FOR OUTPUT
+
+var userTicket = document.getElementById('userTicket');
+var userDiscount = document.getElementById('userDiscount');
+var userCar = document.getElementById('userCar');
+var userCode = document.getElementById('userCode');
+var userPrice = document.getElementById('userPrice');
+
 
 //! SET VARIABLES
 
 var generate = document.getElementById('generate');
 var reset = document.getElementById('reset');
-var price = 0.21 * kmsField.value;
+var discount = 'Offerta Standard';
+
+//! ADD EVENTO TO BUTTON
+
+generate.addEventListener('click', function () {
+    var price = 0.21 * kmsField.value;
+    if (ageField.value === "minor") {
+        price *= 0.8;
+        discount = 'Offerta Minorenni';
+    }
+    if (ageField.value === "over") {
+        price *= 0.6;
+        discount = 'Offerta Over 65';
+    }
+    //CODE FIRST BUTTON
+    userTicket.innerHTML = userField.value;
+    userDiscount.innerHTML = discount;
+    userCar.innerHTML = Math.floor(Math.random() * 12) + 1;
+    userCode.innerHTML = Math.floor(Math.random() * 9999);
+    userPrice.innerHTML = price.toFixed(2) + ' ' + '€';
+})
+
+
+
+
+reset.addEventListener('click', function () {
+
+
+    //CODE SECOND BUTTON
+})
+
 
 
