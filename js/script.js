@@ -59,26 +59,29 @@ generate.addEventListener('click', function () {
         price *= 0.6;
         discount = 'Offerta Over 65';
     }
-    //CODE FIRST BUTTON
     userTicket.innerHTML = userField.value;
     userDiscount.innerHTML = discount;
     userCar.innerHTML = Math.floor(Math.random() * 12) + 1;
     userCode.innerHTML = Math.floor(Math.random() * 9999);
     userPrice.innerHTML = price.toFixed(2) + ' ' + '€';
-    dispalyText.innerText = 'ECCO IL TUO BIGLIETTO';
+    dispalyText.innerHTML = `<i class="fas fa-arrow-circle-down"></i>
+    ECCO IL TUO BIGLIETTO
+    <i class="fas fa-arrow-circle-down"></i>`;
     displayBox.classList.remove('d-none');
-})
+    //CODE FIRST BUTTON
+});
 
 
 reset.addEventListener('click', function () {
     displayBox.classList.add('d-none');
+    dispalyText.innerHTML = `<i class="fas fa-arrow-circle-down"></i>
+    IL TUO BIGLIETTO SARA' VISIBILE QUI SOTTO
+    <i class="fas fa-arrow-circle-down"></i>`;
     var defField = document.getElementsByClassName('def');
     var defValue = ' ';
     for (var i = 0; i < defField.length; i++) {
-        defField[i] = defValue;
+        defField[i].value = defValue;
     }
+    ageField.selectedIndex = 0;
     //CODE SECOND BUTTON
-})
-
-
-
+});

@@ -66,6 +66,10 @@ select{
     border-radius: 10px;
 }
 
+input:focus-visible {
+    outline: 0;
+}
+
 .d-none{
     display: none;
 }
