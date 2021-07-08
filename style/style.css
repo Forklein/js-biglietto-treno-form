@@ -7,6 +7,7 @@
 body{
     background-color: #b91450;
     font-family: sans-serif;
+    font-weight: bold;
 }
 
 /* Utility */
@@ -39,10 +40,6 @@ body{
     text-align-last: center;
 }
 
-.border-radius{
-    border-radius: 20px;
-}
-
 .d-flex{
     display: flex;
 }
@@ -60,6 +57,14 @@ button{
     margin: 0 30px;
 }
 
+input,
+select{
+    border: 2px solid #b91450;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
 /* Start css */
 
 .container{
@@ -71,7 +76,9 @@ button{
 
 .user-detail{
     padding: 10px 0;
-    margin: 20px 0;
+    margin: 35px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 15px grey;
 }
 
 .user-detail .row{
@@ -86,6 +93,8 @@ button{
 
 .user-result{
     padding: 10px;
+    margin: 35px 0;
+    box-shadow: 0 0 30px 15px grey;
 }
 
 .user-result .row-1{
