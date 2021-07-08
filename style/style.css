@@ -19,12 +19,24 @@ body{
     color: #fff;
 }
 
+.color-black{
+    color: #000;
+}
+
 .bg-white{
     background-color: #fff;
 }
 
+.bg-gray{
+    background-color: gray;
+}
+
 .text-center{
     text-align: center;
+}
+
+.text-align-last{
+    text-align-last: center;
 }
 
 .border-radius{
@@ -33,6 +45,10 @@ body{
 
 .d-flex{
     display: flex;
+}
+
+.f-grow{
+    flex-grow: 1;
 }
 
 .space-around{
@@ -51,6 +67,8 @@ button{
     margin: 50px auto;
 }
 
+/*! PART 1 */
+
 .user-detail{
     padding: 10px 0;
     margin: 20px 0;
@@ -62,4 +80,22 @@ button{
 
 .user-detail .col{
     flex-direction: column;
+}
+
+/*! PART 2 */
+
+.user-result{
+    padding: 10px;
+}
+
+.user-result .row-1{
+    margin-top: 20px;
+}
+
+.user-result .col{
+    padding: 20px;
+}
+
+.user-result .box-info .details{
+    margin-top: 80px;
 }

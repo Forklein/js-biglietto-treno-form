@@ -12,20 +12,20 @@
 <body>
 
     <div class="container color-white text-center">
-        <h1>Calcola il prezzo del tuo Biglietto</h1>
+        <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
         <div class="user-detail bg-white border-radius color-pink">
             <div class="row d-flex space-around">
                 <div class="col d-flex">
                     <label for="user">Nome Cognome</label>
-                    <input type="text" id="user">
+                    <input class="text-center" type="text" id="user">
                 </div>
                 <div class="col d-flex">
                     <label for="kms">Km da percorrere</label>
-                    <input type="text" id="kms">
+                    <input class="text-center" type="text" id="kms">
                 </div>
                 <div class="col d-flex">
                     <label for="age">Fascia d'età</label>
-                    <select id="age">
+                    <select class="text-align-last" id="age">
                         <option value="minor">Minorenne</option>
                         <option value="major">Maggiorenne</option>
                         <option value="over">Over 65</option>
@@ -37,8 +37,43 @@
                 <button id="reset">Reset</button>
             </div>
         </div>
-        <div class="user-result">
-
+        <h1>IL TUO BIGLIETTO</h1>
+        <div class="user-result bg-white color-black">
+            <h2>Dettaglio passeggero</h2>
+            <div class="row-1 d-flex">
+                <div class="col bg-gray">
+                    <h3>Nome Passeggero</h3>
+                    <p style="margin-top: 30px;">Pippo</p>
+                </div>
+                <div class="col f-grow">
+                    <div class="row-2 d-flex space-around">
+                        <div class="box-info">
+                            <h3>Offerta</h3>
+                            <div class="details">
+                                <p>Sconto Minorenne</p>
+                            </div>
+                        </div>
+                        <div class="box-info">
+                            <h3>Carrozza</h3>
+                            <div class="details">
+                                <p>7</p>
+                            </div>
+                        </div>
+                        <div class="box-info">
+                            <h3>Codice CP</h3>
+                            <div class="details">
+                                <p>97928</p>
+                            </div>
+                        </div>
+                        <div class="box-info">
+                            <h3>Costo Biglietto</h3>
+                            <div class="details">
+                                <p>3.36€</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
