@@ -13,17 +13,33 @@
 
     <div class="container color-white text-center">
         <h1>Calcola il prezzo del tuo Biglietto</h1>
-        <div class="user-detail">
-            <div class="box">
-                <label for="user">Nome Cognome</label>
-                <input type="text" id="user">
+        <div class="user-detail bg-white border-radius color-pink">
+            <div class="row d-flex space-around">
+                <div class="col d-flex">
+                    <label for="user">Nome Cognome</label>
+                    <input type="text" id="user">
+                </div>
+                <div class="col d-flex">
+                    <label for="kms">Km da percorrere</label>
+                    <input type="text" id="kms">
+                </div>
+                <div class="col d-flex">
+                    <label for="age">Fascia d'età</label>
+                    <select id="age">
+                        <option value="minor">Minorenne</option>
+                        <option value="major">Maggiorenne</option>
+                        <option value="over">Over 65</option>
+                    </select>
+                </div>
             </div>
-            <label for="kms">Km da percorrere</label>
-            <input type="text" id="kms">
-            <label for="age">Fascia d'età</label>
-            <input type="text" id="age">
+            <div class="row">
+                <button id="generate">Genera</button>
+                <button id="reset">Reset</button>
+            </div>
         </div>
-        <div class="user-result"></div>
+        <div class="user-result">
+
+        </div>
     </div>
 
     <script src="./js/script.js"></script>
