@@ -41,8 +41,6 @@ var dispalyText = document.getElementById('d-text');
 var displayBox = document.getElementById('box-ticket');
 
 
-
-
 //! SET VARIABLES
 
 var generate = document.getElementById('generate');
@@ -72,11 +70,13 @@ generate.addEventListener('click', function () {
 })
 
 
-
-
 reset.addEventListener('click', function () {
-
-
+    displayBox.classList.add('d-none');
+    var defField = document.getElementsByClassName('def');
+    var defValue = ' ';
+    for (var i = 0; i < defField.length; i++) {
+        defField[i] = defValue;
+    }
     //CODE SECOND BUTTON
 })
 
