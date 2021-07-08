@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style/style.css">
     <title>Calcolo del prezzo del biglietto del treno con form</title>
 </head>
@@ -37,8 +40,12 @@
                 <button id="reset">Reset</button>
             </div>
         </div>
-        <h1>IL TUO BIGLIETTO</h1>
-        <div class="user-result bg-white color-black">
+        <h1 id="d-text">
+            <i class="fas fa-arrow-circle-down"></i>
+            IL TUO BIGLIETTO SARA' VISIBILE QUI SOTTO
+            <i class="fas fa-arrow-circle-down"></i>
+        </h1>
+        <div id="box-ticket" class="user-result bg-white color-black d-none">
             <h2>Dettaglio passeggero</h2>
             <div class="row-1 d-flex">
                 <div class="col bg-gray">

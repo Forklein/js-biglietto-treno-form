@@ -66,11 +66,33 @@ select{
     border-radius: 10px;
 }
 
+.d-none{
+    display: none;
+}
+
 /* Start css */
 
 .container{
     max-width: 900px;
     margin: 50px auto;
+}
+
+#d-text i{
+    animation: arrow 1s infinite;
+    margin: 0 20px;
+    font-size: 40px;
+}
+
+@keyframes arrow {
+    0%{
+        transform: inherit;
+    }
+    75%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 /*! PART 1 */

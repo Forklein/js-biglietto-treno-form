@@ -37,6 +37,10 @@ var userDiscount = document.getElementById('userDiscount');
 var userCar = document.getElementById('userCar');
 var userCode = document.getElementById('userCode');
 var userPrice = document.getElementById('userPrice');
+var dispalyText = document.getElementById('d-text');
+var displayBox = document.getElementById('box-ticket');
+
+
 
 
 //! SET VARIABLES
@@ -63,6 +67,8 @@ generate.addEventListener('click', function () {
     userCar.innerHTML = Math.floor(Math.random() * 12) + 1;
     userCode.innerHTML = Math.floor(Math.random() * 9999);
     userPrice.innerHTML = price.toFixed(2) + ' ' + '€';
+    dispalyText.innerText = 'ECCO IL TUO BIGLIETTO';
+    displayBox.classList.remove('d-none');
 })
 
 
