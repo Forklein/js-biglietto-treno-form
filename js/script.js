@@ -24,4 +24,17 @@ Nascondiamo la sezione del biglietto se non è ancora stato generato il bigliett
 Aggiungiamo una funzione che ci permetta di resettare i campi del form ai valori originali.
 */
 
+//! GET VALUE FROM INPUT
+
+var userField = document.getElementById('user');
+var kmsField = document.getElementById('kms');
+var ageField = document.getElementById('age');
+
+
+//! SET VARIABLES
+
+var generate = document.getElementById('generate');
+var reset = document.getElementById('reset');
+var price = 0.21 * kmsField.value;
+
 
