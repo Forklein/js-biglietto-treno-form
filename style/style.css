@@ -74,6 +74,10 @@ input:focus-visible {
     display: none;
 }
 
+h1{
+    font-size: 25px;
+}
+
 /* Start css */
 
 .container{
@@ -152,4 +156,39 @@ input:focus-visible {
 
 .user-result .box-info .details{
     margin-top: 80px;
+}
+
+
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 16px;
+    }
+
+    .fa-arrow-circle-down:before{
+        font-size: 14px;
+    }
+
+    .container{
+        width: 80%;
+    }
+
+    .row-1{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 576px){
+    h1{
+        font-size: 12px;
+    }
+
+    .row{
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .col{
+        margin: 5px 0;
+    }
+
 }
