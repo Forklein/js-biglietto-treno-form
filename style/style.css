@@ -179,7 +179,7 @@ h1{
 
 @media screen and (max-width: 576px){
     h1{
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .row{
@@ -189,6 +189,10 @@ h1{
     
     .col{
         margin: 5px 0;
+    }
+
+    .container{
+        width: 100%;
     }
 
 }
