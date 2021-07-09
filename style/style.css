@@ -99,6 +99,24 @@ input:focus-visible {
     }
 }
 
+/*! ALERT WINDOW */
+
+.alert{
+    text-align: initial;
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    padding: 20px;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 30px 15px grey;
+}
+
+#close{
+    cursor: pointer;
+}
+
 /*! PART 1 */
 
 .user-detail{

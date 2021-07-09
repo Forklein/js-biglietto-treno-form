@@ -24,11 +24,7 @@ Nascondiamo la sezione del biglietto se non è ancora stato generato il bigliett
 Aggiungiamo una funzione che ci permetta di resettare i campi del form ai valori originali.
 */
 
-//! GET VALUE FROM INPUT
 
-var userField = document.getElementById('user');
-var kmsField = document.getElementById('kms');
-var ageField = document.getElementById('age');
 
 //! TARGET FOR OUTPUT
 
@@ -41,6 +37,11 @@ var dispalyText = document.getElementById('d-text');
 var displayBox = document.getElementById('box-ticket');
 
 
+//! TARGET FOR ALERT
+var alertElement = document.getElementById('alert');
+var closeElement = document.getElementById('close');
+
+
 //! SET VARIABLES
 
 var generate = document.getElementById('generate');
@@ -50,24 +51,34 @@ var discount = 'Offerta Standard';
 //! ADD EVENTO TO BUTTON
 
 generate.addEventListener('click', function () {
-    var price = 0.21 * kmsField.value;
-    if (ageField.value === "minor") {
-        price *= 0.8;
-        discount = 'Offerta Minorenni';
+    //! GET VALUE FROM INPUT
+    var userField = document.getElementById('user');
+    var kmsField = document.getElementById('kms');
+    //Control check
+    if (!userField.value || !isNaN(userField.value) || !kmsField.value) {
+        alertElement.classList.remove('d-none');
+    } else {
+        var price = 0.21 * kmsField.value;
+        var ageField = document.getElementById('age');
+        if (ageField.value === "minor") {
+            price *= 0.8;
+            discount = 'Offerta Minorenni';
+        }
+        if (ageField.value === "over") {
+            price *= 0.6;
+            discount = 'Offerta Over 65';
+        }
+        userTicket.innerHTML = userField.value;
+        userDiscount.innerHTML = discount;
+        userCar.innerHTML = Math.floor(Math.random() * 12) + 1;
+        userCode.innerHTML = Math.floor(Math.random() * 9999);
+        userPrice.innerHTML = price.toFixed(2) + ' ' + '€';
+        dispalyText.innerHTML = `<i class="fas fa-arrow-circle-down"></i>
+        ECCO IL TUO BIGLIETTO
+        <i class="fas fa-arrow-circle-down"></i>`;
+        displayBox.classList.remove('d-none');
+        alertElement.classList.add('d-none');
     }
-    if (ageField.value === "over") {
-        price *= 0.6;
-        discount = 'Offerta Over 65';
-    }
-    userTicket.innerHTML = userField.value;
-    userDiscount.innerHTML = discount;
-    userCar.innerHTML = Math.floor(Math.random() * 12) + 1;
-    userCode.innerHTML = Math.floor(Math.random() * 9999);
-    userPrice.innerHTML = price.toFixed(2) + ' ' + '€';
-    dispalyText.innerHTML = `<i class="fas fa-arrow-circle-down"></i>
-    ECCO IL TUO BIGLIETTO
-    <i class="fas fa-arrow-circle-down"></i>`;
-    displayBox.classList.remove('d-none');
     //CODE FIRST BUTTON
 });
 
@@ -78,10 +89,16 @@ reset.addEventListener('click', function () {
     IL TUO BIGLIETTO SARA' VISIBILE QUI SOTTO
     <i class="fas fa-arrow-circle-down"></i>`;
     var defField = document.getElementsByClassName('def');
-    var defValue = ' ';
+    var defValue = '';
     for (var i = 0; i < defField.length; i++) {
         defField[i].value = defValue;
     }
+    var ageField = document.getElementById('age');
     ageField.selectedIndex = 0;
     //CODE SECOND BUTTON
 });
+
+
+closeElement.addEventListener('click', function () {
+    alertElement.classList.add('d-none');
+})
